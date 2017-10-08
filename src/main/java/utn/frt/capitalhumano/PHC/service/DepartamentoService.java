@@ -3,14 +3,14 @@ package utn.frt.capitalhumano.PHC.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import utn.frt.capitalhumano.PHC.dominio.Departamento;
-import utn.frt.capitalhumano.PHC.repository.DepartamentoRepository;
+import utn.frt.capitalhumano.PHC.persistencia.DepartamentoRepositoryMemory;
 
 import java.util.List;
 
 @Component
 public class DepartamentoService {
     @Autowired
-    private DepartamentoRepository repository;
+    private DepartamentoRepositoryMemory repository;
 
     public List<Departamento> getAllDepartamentos() {
         return repository.getAll();

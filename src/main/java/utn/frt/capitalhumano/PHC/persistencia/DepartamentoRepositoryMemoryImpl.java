@@ -1,4 +1,4 @@
-package utn.frt.capitalhumano.PHC.repository;
+package utn.frt.capitalhumano.PHC.persistencia;
 
 import org.springframework.stereotype.Repository;
 import utn.frt.capitalhumano.PHC.dominio.Departamento;
@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Repository
-public class DepartamentoRepository {
+public class DepartamentoRepositoryMemoryImpl implements DepartamentoRepositoryMemory {
     private int id = 0;
 
     private List<Departamento> departamentos = new ArrayList<Departamento>();
