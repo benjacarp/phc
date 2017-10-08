@@ -27,8 +27,13 @@ public class DepartamentoController {
     @RequestMapping(value = "/", method = RequestMethod.POST,
             consumes = MediaType.APPLICATION_JSON_VALUE)
     public String create(@RequestBody Departamento departamento) {
-        service.save(departamento.getNombre());
-        return "departamento creado";
+        return service.save(departamento);
+    }
+
+    @RequestMapping(value = "/{id}", method = RequestMethod.PUT,
+            consumes = MediaType.APPLICATION_JSON_VALUE)
+    public String modify(@PathVariable int id, @RequestBody Departamento departamento) {
+        return service.update(departamento, id);
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)

@@ -37,4 +37,12 @@ public class DepartamentoRepository {
         }
         return null;
     }
+
+    public void update(Departamento departamento, int id) throws Exception {
+        Departamento toBeDeleted = findById(id);
+        if (toBeDeleted == null) {
+            throw new Exception("No se encontro el departamento");
+        }
+        toBeDeleted.setNombre(departamento.getNombre());
+    }
 }

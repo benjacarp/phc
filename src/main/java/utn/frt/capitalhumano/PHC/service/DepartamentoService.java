@@ -16,10 +16,9 @@ public class DepartamentoService {
         return repository.getAll();
     }
 
-    public void save(String nombre) {
-        Departamento departamento = new Departamento();
-        departamento.setNombre(nombre);
+    public String save(Departamento departamento) {
         repository.save(departamento);
+        return "departamento creado";
     }
 
     public String delete(int id) {
@@ -33,5 +32,14 @@ public class DepartamentoService {
 
     public Departamento getDepartamentoById(int id) {
         return repository.findById(id);
+    }
+
+    public String update(Departamento departamento, int id) {
+        try {
+            repository.update(departamento, id);
+        } catch (Exception e) {
+            return e.getMessage();
+        }
+        return "modificacion exitosa";
     }
 }
