@@ -21,7 +21,10 @@ public class Tarea {
         this.descripcion = descripcion;
         this.puestos = puestos;
     }
-    
+
+    public Tarea() {
+
+    }
     public int getIdTarea() {
         return idTarea;
     }

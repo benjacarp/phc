@@ -22,6 +22,9 @@ public class Requerimiento {
         this.puestos = puestos;
     }
 
+    public Requerimiento() {
+
+    }
     
     public int getIdRequerimiento() {
         return idRequerimiento;

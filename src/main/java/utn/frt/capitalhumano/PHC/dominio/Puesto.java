@@ -32,6 +32,9 @@ public class Puesto {
         this.empleados = empleados;
     }
 
+    public Puesto() {
+
+    }
    
 
     public int getIdPuesto() {

@@ -45,7 +45,10 @@ public class Empleado {
         this.puestos = puestos;
     }
     
-    
+    public Empleado(){
+
+    }
+
     public int getIdEmpleado() {
         return idEmpleado;
     }

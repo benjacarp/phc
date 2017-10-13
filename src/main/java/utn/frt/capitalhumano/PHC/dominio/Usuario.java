@@ -27,6 +27,10 @@ public class Usuario {
         this.contraseñaRestaurada = contraseñaRestaurada;
     }
 
+    public Usuario() {
+
+    }
+
     public int getIdEmpleado() {
         return idEmpleado;
     }

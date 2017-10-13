@@ -10,8 +10,12 @@ package utn.frt.capitalhumano.PHC.dominio;
  * @author josdan
  */
 public class Nivel {
-    private int idNivel = 0;
+    private int idNivel;
     private String nombre;
+
+    public Nivel(){
+
+    }
 
     public Nivel(String nombre) {
         this.nombre = nombre;
